@@ -1,0 +1,9 @@
+package com.Ejemplo_dos.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.Ejemplo_dos.entity.Ejemplo;
+
+public interface EjemploRepository extends JpaRepository<Ejemplo, Integer>{
+
+}

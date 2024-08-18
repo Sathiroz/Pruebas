@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="EjemploUnoApplicationTests" project="ejemplo_uno" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="com.ejemplo_uno.EjemploUnoApplicationTests" time="0.124" displayname="EjemploUnoApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.ejemplo_uno.EjemploUnoApplicationTests]">
+    <testcase name="buscar" classname="com.ejemplo_uno.EjemploUnoApplicationTests" time="0.077" displayname="buscar()" uniqueid="[engine:junit-jupiter]/[class:com.ejemplo_uno.EjemploUnoApplicationTests]/[method:buscar()]"/>
+    <testcase name="testEliminar" classname="com.ejemplo_uno.EjemploUnoApplicationTests" time="0.016" displayname="testEliminar()" uniqueid="[engine:junit-jupiter]/[class:com.ejemplo_uno.EjemploUnoApplicationTests]/[method:testEliminar()]"/>
+    <testcase name="guardarTest" classname="com.ejemplo_uno.EjemploUnoApplicationTests" time="0.02" displayname="guardarTest()" uniqueid="[engine:junit-jupiter]/[class:com.ejemplo_uno.EjemploUnoApplicationTests]/[method:guardarTest()]"/>
+  </testsuite>
+</testrun>

@@ -1,0 +1,5 @@
+package com.ejemplo_uno.repository;
+
+public interface EjemploRepository {
+
+}

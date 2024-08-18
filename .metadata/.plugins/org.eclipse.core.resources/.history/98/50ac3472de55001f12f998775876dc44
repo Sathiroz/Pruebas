@@ -1,0 +1,25 @@
+package com.ejemplo_uno.request;
+
+import java.sql.Date;
+
+
+public class EjemploRequest {
+
+	
+	private  int ejemploId; 
+	private String nombre;
+	private Date fecha;
+	
+	public EjemploRequest() {
+		
+	}
+
+	public EjemploRequest(int ejemploId, String nombre, Date fecha) {
+		super();
+		this.ejemploId = ejemploId;
+		this.nombre = nombre;
+		this.fecha = fecha;
+	}
+	
+	
+}

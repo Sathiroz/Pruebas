@@ -1,0 +1,12 @@
+package com.Ejemplo_dos.logic;
+
+import org.springframework.stereotype.Service;
+
+import com.Ejemplo_dos.service.EjemploService;
+
+@Service
+public class EjemploLogic implements EjemploService{
+
+	
+	
+}

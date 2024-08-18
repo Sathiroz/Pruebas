@@ -1,0 +1,26 @@
+package com.ejemplo_uno;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.ejemplo_uno.entity.Ejemplo;
+import com.ejemplo_uno.logic.EjemploLogic;
+import com.ejemplo_uno.repository.EjemploRepository;
+
+@SpringBootTest
+class EjemploUnoApplicationTests {
+
+	@Mock
+	EjemploRepository repo;
+	
+	@InjectMocks
+	EjemploLogic logic;
+
+	@Test
+	public void guardar() {
+		Ejemplo ejemplo = new Ejemplo();
+	}
+	
+}

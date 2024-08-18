@@ -1,0 +1,13 @@
+package com.ejemplo_uno.service;
+
+import com.ejemplo_uno.entity.Ejemplo;
+
+public interface EjemploService {
+	
+	
+	Ejemplo guardar (Ejemplo ejemplo);
+	String eliminar (int id, Ejemplo ejemplo);
+	buscar
+	mostrar
+
+}

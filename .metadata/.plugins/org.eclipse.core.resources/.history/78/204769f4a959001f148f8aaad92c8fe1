@@ -1,0 +1,65 @@
+package com.Ejemplo_dos.logic;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.Ejemplo_dos.entity.Ejemplo;
+import com.Ejemplo_dos.repository.EjemploRepository;
+import com.Ejemplo_dos.service.EjemploService;
+
+import jakarta.persistence.EntityNotFoundException;
+
+@Service
+public class EjemploLogic implements EjemploService{
+
+	@Autowired
+	EjemploRepository repo;
+	
+	
+	@Override
+	public Ejemplo guardar(Ejemplo ejemplo) {
+		
+		if (repo.findById(ejemplo.getIdEjemplo()).isPresent()) {
+			return repo.save(ejemplo);
+		}
+		
+		throw new EntityNotFoundException("Error");
+		
+	}
+
+	@Override
+	public Ejemplo editar(int id,Ejemplo ejemplo) {
+		Optional<Ejemplo> ejem = repo.findById(id);
+		
+		if (ejem.isPresent()) {
+			ejem.set(ejemplo.getNombre());
+			ejem.setFecha(ejemplo.getFecha());
+		}
+		
+		return null;
+	}
+
+	@Override
+	public String eliminar(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Ejemplo buscar(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List mostrar() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	
+}

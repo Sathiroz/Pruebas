@@ -1,0 +1,17 @@
+package com.ejemplo_uno.service;
+
+import java.util.List;
+
+import com.ejemplo_uno.entity.Ejemplo;
+
+public interface EjemploService {
+	
+	
+	Ejemplo guardar (Ejemplo ejemplo);
+	Ejemplo actualizar (Ejemplo ejemplo);
+	String eliminar (int id, Ejemplo ejemplo);
+	
+	Ejemplo buscar (int id);
+	List mostrar();
+
+}

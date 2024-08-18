@@ -1,0 +1,20 @@
+##Puesto para hacer pruebas en local
+server.port=8080
+
+##Configuracion de db
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521:XE
+spring.datasource.username=dbRamses
+spring.datasource.password=admin
+spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+
+## Configuracion de Jpa e Hibernate
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=update
+
+##Configuracion para JWT y Oauth 2
+spring.security.oauth2.resourceserver.jwt.jwk-set-uri=http://localhost:8080/.well-known/jwks.json
+spring.security.oauth2.client.registration.myclient.client-id=your-client-id
+spring.security.oauth2.client.registration.myclient.client-secret=your-client-secret
+spring.security.oauth2.client.registration.myclient.scope=read,write
+spring.security.oauth2.client.registration.myclient.authorization-grant-type=authorization_code
+spring.security.oauth2.client.registration.myclient.redirect-uri=http://localhost:8080/login/oauth2/code/myclient

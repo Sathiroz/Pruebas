@@ -1,0 +1,53 @@
+package com.ejemplo_uno.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ejemplo_uno.entity.Ejemplo;
+import com.ejemplo_uno.logic.EjemploLogic;
+
+@RestController
+@RequestMapping("ejemplo")
+public class EjemploController {
+
+	
+	@Autowired
+	EjemploLogic service;
+	
+	@PostMapping
+	public ResponseEntity<Ejemplo> guardar(@RequestBody Ejemplo ejemplo){
+		Ejemplo add = service.guardar(ejemplo);
+		return new ResponseEntity<Ejemplo>(add, HttpStatus.OK);
+	}
+	@GetMapping
+	public ResponseEntity<List<Ejemplo>> mostrar(@RequestBody Ejemplo ejemplo){
+		return new ResponseEntity<List<Ejemplo>>(service.mostrar(), HttpStatus.OK);
+		
+	}
+	@PutMapping("id")
+	public ResponseEntity<Ejemplo> actualizar(@PathVariable int id, @RequestBody Ejemplo ejemplo){
+		Ejemplo edit = service.actualizar(id, ejemplo);
+		return new ResponseEntity<Ejemplo>(edit, HttpStatus.OK);	
+	}
+	@DeleteMapping("id")
+	public ResponseEntity<String> eliminar(@PathVariable int id){
+		String delete = service.eliminar(id);
+		return new ResponseEntity<String>(delete, HttpStatus.OK);
+	}
+	@GetMapping("id")
+	public ResponseEntity<Ejemplo> buscar(){
+		
+	}
+	
+}

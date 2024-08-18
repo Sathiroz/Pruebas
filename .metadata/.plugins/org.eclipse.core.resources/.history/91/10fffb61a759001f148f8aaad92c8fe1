@@ -1,0 +1,17 @@
+package com.Ejemplo_dos.entity;
+
+import java.time.LocalDate;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "EJEMPLO")
+public class Ejemplo {
+
+	private int idEjemplo;
+	private String nombre;
+	private LocalDate fecha;
+	
+	
+}

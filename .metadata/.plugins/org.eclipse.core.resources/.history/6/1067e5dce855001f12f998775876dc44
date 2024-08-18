@@ -1,0 +1,7 @@
+spring.application.name=ejemplo_uno
+
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521:XE
+spring.datasource.username=dbRamses
+spring.datasource.password=admin
+spring.datasource.driver-class-name=
+

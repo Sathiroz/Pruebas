@@ -1,0 +1,55 @@
+package com.Ejemplo_dos;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import java.time.LocalDate;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+
+import com.Ejemplo_dos.entity.Ejemplo;
+import com.Ejemplo_dos.logic.EjemploLogic;
+import com.Ejemplo_dos.repository.EjemploRepository;
+
+@SpringBootTest
+class EjemploDosApplicationTests {
+
+	@Mock
+	EjemploRepository repo;
+	
+	@InjectMocks
+	EjemploLogic logic;
+	
+	@Test
+	public void guardarTest() {
+		// Configuración
+		Ejemplo ejemplo = new Ejemplo();
+		ejemplo.setNombre("test");
+
+		// Establecer una fecha válida
+		ejemplo.setFecha(LocalDate.now()); // Usando la fecha actual
+
+		// Definir comportamiento esperado
+		when(repo.save(any(Ejemplo.class))).thenReturn(ejemplo);
+
+		// Ejecución del método a probar
+		Ejemplo result = logic.guardar(ejemplo);
+
+		// Verificación de resultados
+		assertEquals("test", result.getNombre());
+		assertNotNull(result.getFecha()); // Verifica que la fecha no es null
+		assertEquals(LocalDate.now(), result.getFecha()); // Verifica que la fecha es la esperada
+
+		// Verificación de que el repositorio fue llamado correctamente
+		verify(repo).save(ejemplo);
+	}
+	
+	
+
+}

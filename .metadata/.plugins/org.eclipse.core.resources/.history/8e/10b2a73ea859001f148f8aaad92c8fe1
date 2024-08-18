@@ -1,0 +1,14 @@
+package com.Ejemplo_dos.service;
+
+import com.Ejemplo_dos.entity.Ejemplo;
+
+public interface EjemploService {
+
+	Ejemplo guardar(Ejemplo ejemplo);
+	Ejemplo editar(Ejemplo ejemplo);
+	eliminar
+	buscar
+	mostrar
+	
+	
+}

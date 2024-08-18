@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="EjemploUnoApplicationTests" project="ejemplo_uno" tests="5" started="5" failures="1" errors="0" ignored="0">
+  <testsuite name="com.ejemplo_uno.EjemploUnoApplicationTests" time="0.136" displayname="EjemploUnoApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.ejemplo_uno.EjemploUnoApplicationTests]">
+    <testcase name="buscar" classname="com.ejemplo_uno.EjemploUnoApplicationTests" time="0.07" displayname="buscar()" uniqueid="[engine:junit-jupiter]/[class:com.ejemplo_uno.EjemploUnoApplicationTests]/[method:buscar()]"/>
+    <testcase name="actualizar" classname="com.ejemplo_uno.EjemploUnoApplicationTests" time="0.009" displayname="actualizar()" uniqueid="[engine:junit-jupiter]/[class:com.ejemplo_uno.EjemploUnoApplicationTests]/[method:actualizar()]"/>
+    <testcase name="testEliminar" classname="com.ejemplo_uno.EjemploUnoApplicationTests" time="0.005" displayname="testEliminar()" uniqueid="[engine:junit-jupiter]/[class:com.ejemplo_uno.EjemploUnoApplicationTests]/[method:testEliminar()]"/>
+    <testcase name="testMostrar" classname="com.ejemplo_uno.EjemploUnoApplicationTests" time="0.015" displayname="testMostrar()" uniqueid="[engine:junit-jupiter]/[class:com.ejemplo_uno.EjemploUnoApplicationTests]/[method:testMostrar()]">
+      <failure>
+        <expected>memo</expected>
+        <actual>jorge</actual>
+        org.opentest4j.AssertionFailedError: expected: &lt;memo&gt; but was: &lt;jorge&gt;&#13;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)&#13;
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)&#13;
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)&#13;
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)&#13;
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)&#13;
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)&#13;
+	at com.ejemplo_uno.EjemploUnoApplicationTests.testMostrar(EjemploUnoApplicationTests.java:144)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+
+      </failure>
+    </testcase>
+    <testcase name="guardarTest" classname="com.ejemplo_uno.EjemploUnoApplicationTests" time="0.018" displayname="guardarTest()" uniqueid="[engine:junit-jupiter]/[class:com.ejemplo_uno.EjemploUnoApplicationTests]/[method:guardarTest()]"/>
+  </testsuite>
+</testrun>

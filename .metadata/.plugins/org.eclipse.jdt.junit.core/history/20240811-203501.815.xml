@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ejemplo_uno" project="ejemplo_uno" tests="2" started="2" failures="1" errors="0" ignored="0">
+  <testsuite name="com.ejemplo_uno.EjemploUnoApplicationTests" time="0.108" displayname="EjemploUnoApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.ejemplo_uno.EjemploUnoApplicationTests]">
+    <testcase name="buscar" classname="com.ejemplo_uno.EjemploUnoApplicationTests" time="0.071" displayname="buscar()" uniqueid="[engine:junit-jupiter]/[class:com.ejemplo_uno.EjemploUnoApplicationTests]/[method:buscar()]">
+      <failure>
+        <expected>1</expected>
+        <actual>0</actual>
+        org.opentest4j.AssertionFailedError: expected: &lt;1&gt; but was: &lt;0&gt;&#13;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)&#13;
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)&#13;
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)&#13;
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)&#13;
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)&#13;
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)&#13;
+	at com.ejemplo_uno.EjemploUnoApplicationTests.buscar(EjemploUnoApplicationTests.java:77)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+
+      </failure>
+    </testcase>
+    <testcase name="guardarTest" classname="com.ejemplo_uno.EjemploUnoApplicationTests" time="0.031" displayname="guardarTest()" uniqueid="[engine:junit-jupiter]/[class:com.ejemplo_uno.EjemploUnoApplicationTests]/[method:guardarTest()]"/>
+  </testsuite>
+</testrun>

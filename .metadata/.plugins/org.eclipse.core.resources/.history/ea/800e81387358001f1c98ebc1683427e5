@@ -1,0 +1,13 @@
+##Puesto para hacer pruebas en local
+server.port=8080
+
+##Configuracion de db
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521:XE
+spring.datasource.username=dbRamses
+spring.datasource.password=admin
+spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+
+## Configuracion de Jpa e Hibernate
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=update
+

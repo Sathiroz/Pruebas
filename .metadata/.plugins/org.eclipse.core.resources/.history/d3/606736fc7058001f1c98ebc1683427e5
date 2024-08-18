@@ -1,0 +1,5 @@
+package com.ejemplo_uno.excepcion;
+
+public class ResourceNotFoundExcepcion extends RunTimeExcepcion{
+
+}

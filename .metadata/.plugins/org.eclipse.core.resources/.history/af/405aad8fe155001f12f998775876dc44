@@ -1,0 +1,73 @@
+package com.ejemplo_uno.logic;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.ejemplo_uno.entity.Ejemplo;
+import com.ejemplo_uno.repository.EjemploRepository;
+import com.ejemplo_uno.service.EjemploService;
+
+import jakarta.persistence.EntityNotFoundException;
+
+public class EjemploLogic implements EjemploService{
+
+	@Autowired
+	EjemploRepository repo;
+	
+	
+	@Override
+	public Ejemplo guardar(Ejemplo ejemplo) {
+		if (repo.findById(ejemplo.getEjemploId()) == null) {
+			return repo.save(ejemplo);
+		}
+		throw new EntityNotFoundException("Error al guardar, no puedes poner valores null");
+	}
+
+	@Override
+	public Ejemplo actualizar(int id, Ejemplo ejemplo) {
+		Optional<Ejemplo> ejemplos = repo.findById(id);
+		
+		if (ejemplos.isPresent()) {
+		Ejemplo existente = ejemplos.get();
+		
+		existente.setNombre(ejemplo.getNombre());
+		existente.setFecha(ejemplo.getFecha());
+		
+		return repo.save(existente);
+		}else {
+			throw new EntityNotFoundException("No se encontro el id" + id);
+		}
+		
+		
+	}
+
+	@Override
+	public String eliminar(int id) {
+		String respuesta = "";
+		if (repo.findById(id).isPresent()) {
+			repo.deleteById(id);
+			return respuesta = "Eliminado correctamente";
+		}else {
+			throw new EntityNotFoundException("No se encontro el id");
+		}
+		
+	}
+
+	@Override
+	public Ejemplo buscar(int id) {
+		if (repo.findById(id).isPresent()) {
+			return repo.getById(id);
+			
+		}
+		
+	}
+
+	@Override
+	public List mostrar() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

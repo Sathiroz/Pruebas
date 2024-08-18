@@ -1,0 +1,17 @@
+package com.ejemplo_uno;
+
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.ejemplo_uno.repository.EjemploRepository;
+
+@SpringBootTest
+class EjemploUnoApplicationTests {
+
+	@Mock
+	EjemploRepository repo;
+	
+	@InjectMocks
+
+}

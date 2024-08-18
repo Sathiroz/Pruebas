@@ -1,0 +1,16 @@
+package com.ejemplo_uno.entity;
+
+import java.sql.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "ejemplo")
+public class EjemploEntity {
+	
+	private  int id_ejemplo; 
+	private String nombre;
+	private Date fecha;
+
+}

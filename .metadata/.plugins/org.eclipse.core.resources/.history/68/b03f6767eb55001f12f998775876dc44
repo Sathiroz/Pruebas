@@ -1,0 +1,38 @@
+package com.ejemplo_uno;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.when;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.ejemplo_uno.entity.Ejemplo;
+import com.ejemplo_uno.logic.EjemploLogic;
+import com.ejemplo_uno.repository.EjemploRepository;
+
+@SpringBootTest
+class EjemploUnoApplicationTests {
+
+	@Mock
+	EjemploRepository repo;
+	
+	@InjectMocks
+	EjemploLogic logic;
+
+	@Test
+	public void guardar() {
+		Ejemplo ejemplo = new Ejemplo();
+		
+		ejemplo.setNombre("test");
+		
+		//when es para definir el conportamiento que esperamos
+		when(repo.save(any(Ejemplo.class))).thenReturn(ejemplo);
+		
+		Ejemplo result = logic.guardar(ejemplo);
+		assertEquals("test", result.getNombre());
+	}
+	
+}

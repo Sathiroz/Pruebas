@@ -1,0 +1,5 @@
+package com.ejemplo_uno.request;
+
+public class EjemploRequest {
+
+}

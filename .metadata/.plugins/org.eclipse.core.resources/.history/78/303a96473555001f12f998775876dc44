@@ -1,0 +1,11 @@
+package com.ejemplo_uno.service;
+
+public interface EjemploService {
+	
+	
+	guardar
+	eliminar
+	buscar
+	mostrar
+
+}

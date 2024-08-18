@@ -1,0 +1,8 @@
+package com.ejemplo_uno.config;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class EjemploConfig {
+
+}

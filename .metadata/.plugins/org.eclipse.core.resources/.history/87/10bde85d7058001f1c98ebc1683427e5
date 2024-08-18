@@ -1,0 +1,12 @@
+package com.ejemplo_uno.excepcion;
+
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+
+@ControllerAdvice
+public class GlobalExcepcionHandler extends ResponseEntityExceptionHandler{
+
+	@ExceptionHandler
+	
+}

@@ -1,0 +1,12 @@
+package com.Ejemplo_dos.service;
+
+public interface EjemploService {
+
+	Ejemplo guardar(Ejemplo ejemplo);
+	editar
+	eliminar
+	buscar
+	mostrar
+	
+	
+}

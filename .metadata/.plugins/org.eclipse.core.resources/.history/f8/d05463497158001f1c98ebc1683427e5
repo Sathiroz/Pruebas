@@ -1,0 +1,21 @@
+package com.ejemplo_uno.excepcion;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.context.request.WebRequest;
+import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+
+import com.ejemplo_uno.entity.Ejemplo;
+
+@ControllerAdvice
+public class GlobalExcepcionHandler extends ResponseEntityExceptionHandler{
+
+	@ExceptionHandler(ResourceNotFoundExcepcion.class)
+	public ResponseEntity<Ejemplo> handlerResourceNotFoundExcepcion(ResourceNotFoundExcepcion ex, WebRequest request){
+		return null;
+		
+	}
+	
+	
+}

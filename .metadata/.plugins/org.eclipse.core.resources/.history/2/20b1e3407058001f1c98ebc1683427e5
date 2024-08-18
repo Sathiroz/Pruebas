@@ -1,0 +1,7 @@
+package com.ejemplo_uno.excepcion;
+
+import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+
+public class GlobalExcepcionHandler extends ResponseEntityExceptionHandler{
+
+}

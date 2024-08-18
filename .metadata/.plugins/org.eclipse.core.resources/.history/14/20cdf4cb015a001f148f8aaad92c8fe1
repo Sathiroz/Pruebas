@@ -1,0 +1,32 @@
+package com.Ejemplo_dos;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+
+import com.Ejemplo_dos.entity.Ejemplo;
+import com.Ejemplo_dos.logic.EjemploLogic;
+import com.Ejemplo_dos.repository.EjemploRepository;
+
+@SpringBootTest
+class EjemploDosApplicationTests {
+
+	@MockBean
+	EjemploRepository repo;
+	
+	@InjectMocks
+	EjemploLogic logic;
+	
+	@Test
+	public void guardar() {
+		Ejemplo ejemplo = new Ejemplo();
+		
+		ejemplo.setIdEjemplo(1);
+		ejemplo.setNombre("memo");
+		
+	}
+	
+	
+
+}

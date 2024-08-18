@@ -1,0 +1,14 @@
+package com.ejemplo_uno.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "ejemplo")
+public class EjemploEntity {
+	
+	private  id_ejemplo 
+	nombre 
+	fecha
+
+}

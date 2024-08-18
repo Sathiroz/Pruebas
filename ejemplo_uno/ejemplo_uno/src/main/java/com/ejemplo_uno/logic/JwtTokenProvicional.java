@@ -1,0 +1,11 @@
+//package com.ejemplo_uno.logic;
+//
+//import org.springframework.stereotype.Service;
+//
+//@Service
+//public class JwtTokenProvicional {
+//
+//	
+//	
+//	
+//}
