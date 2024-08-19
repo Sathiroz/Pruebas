@@ -19,7 +19,6 @@ import com.Ejemplo_dos.entity.Ejemplo;
 import com.Ejemplo_dos.logic.EjemploLogic;
 import com.Ejemplo_dos.repository.EjemploRepository;
 
-@RunWith(SpringRunner.class)
 @SpringBootTest
 class EjemploDosApplicationTests {
 
